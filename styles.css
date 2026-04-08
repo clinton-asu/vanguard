@@ -636,6 +636,10 @@ footer ul li:nth-of-type(2) a {
         padding-bottom: 40px;
         box-sizing: border-box;
     }
+
+    #results .container {
+        gap: 50px;
+    }
 }
 
 
