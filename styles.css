@@ -242,7 +242,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 nav {
@@ -571,6 +571,9 @@ footer ul li:nth-of-type(2) a {
 /* MEDIA QUERIES (MEDIUM) */
 
 @media screen and (min-width: 800px) {
+    header .container {
+        padding: 10px;
+    }
 
     nav label {
         display: none;
