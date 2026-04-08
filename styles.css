@@ -412,7 +412,7 @@ main>section {
 
 #results {
     background-color: var(--blue);
-    padding: 30px;
+    padding: 30px 0;
     color: var(--white);
     margin-bottom: 0px;
 }
@@ -508,7 +508,7 @@ main>section {
     background-color: black;
     color: var(--white);
     margin: 0px;
-    padding: 30px;
+    padding: 30px 0;
 }
 
 form section {
@@ -523,7 +523,7 @@ form textarea {
 }
 
 form label {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 
 form input,
