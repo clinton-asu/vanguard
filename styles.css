@@ -159,12 +159,31 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+nav h2,
+footer h2 {
+    display: none;
+}
+
 h1 {
     font-size: 1.8em;
     position: relative;
     padding-left: 4rem;
     color: var(--blue);
     font-weight: 700;
+}
+
+/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+h1::before {
+    content: "";
+    position: absolute;
+    left: -0.5rem;
+    top: -0.8rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    background: url('images/vanguard-logo.svg') no-repeat center/contain;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 h2 {
@@ -189,6 +208,31 @@ a {
     cursor: default;
 }
 
+h2,
+h3,
+p,
+main a,
+#services,
+#contact button,
+footer li {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 header {
     background-color: var(--black);
     color: var(--white);
@@ -204,11 +248,6 @@ header .container {
 nav {
     text-align: right;
     position: relative;
-}
-
-nav h2,
-footer h2 {
-    display: none;
 }
 
 nav ul {
@@ -354,19 +393,7 @@ nav input:checked~label:not(.steps) span:after {
     transform: scale(1.05);
 }
 
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
-
-h1::before {
-    content: "";
-    position: absolute;
-    left: -0.5rem;
-    top: -0.8rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-}
-
-main section {
+main>section {
     margin: 30px auto;
 }
 
@@ -376,21 +403,29 @@ main section {
     padding: 35px 20px 10px;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 
 #services .container>section:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
-#result {
+#results {
     background-color: var(--blue);
     padding: 30px;
     color: var(--white);
     margin-bottom: 0px;
 }
 
-#result .container>section>table {
+#results .container section {
+    margin: 20px auto;
+}
+
+#results h3 {
+    font-size: 1.8rem;
+}
+
+#results .container>section>table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
@@ -399,13 +434,13 @@ main section {
     text-align: center;
 }
 
-#result .container>section>table th,
-#result .container>section>table td {
+#results .container>section>table th,
+#results .container>section>table td {
     padding: 1rem;
     border: 1px solid var(--charcoal);
 }
 
-#result .container>section>table thead th {
+#results .container>section>table thead th {
     font-weight: bold;
     background-color: var(--black);
 }
@@ -414,7 +449,7 @@ main section {
     background-color: var(--charcoal);
 }
 
-#result .container>section>table tbody tr:nth-child(odd) {
+#results .container>section>table tbody tr:nth-child(odd) {
     background-color: var(--black);
 }
 
@@ -474,6 +509,10 @@ main section {
     color: var(--white);
     margin: 0px;
     padding: 30px;
+}
+
+form section {
+    margin: 10px auto;
 }
 
 form label,
@@ -554,13 +593,32 @@ footer ul li:nth-of-type(2) a {
         display: none;
     }
 
-    #results {
+    #services .container {
+        display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 
-    .results-container {
+    #services .container>h2 {
+        grid-column: 1 / -1;
+    }
+
+    #services .container>section {
+        margin: 0;
+    }
+
+    #results .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
+    }
+
+    #results .container h2,
+    #results .container p {
+        margin: 0;
+        grid-column: 1 / -1;
     }
 
     .results-table {
@@ -574,3 +632,34 @@ footer ul li:nth-of-type(2) a {
 
 
 /* MEDIA QUERIES (LARGE) */
+@media screen and (min-width: 1280px) {
+    #services .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #services .container>h2 {
+        grid-column: 1 / -1;
+    }
+
+    #contact .container form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    #contact .container h2,
+    #contact .container p {
+        grid-column: 1 / -1;
+    }
+
+    #contact .container section {
+        margin: 0;
+    }
+
+    #contact .container button {
+        height: 50px;
+
+    }
+
+}
