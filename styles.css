@@ -418,7 +418,7 @@ main>section {
 }
 
 #results .container section {
-    margin: 20px auto;
+    margin: 20px 0;
 }
 
 #results h3 {
@@ -445,7 +445,7 @@ main>section {
     background-color: var(--black);
 }
 
-#result .container>section>table tbody tr:nth-child(even) {
+#results .container>section>table tbody tr:nth-child(even) {
     background-color: var(--charcoal);
 }
 
@@ -637,8 +637,8 @@ footer ul li:nth-of-type(2) a {
         box-sizing: border-box;
     }
 
-    #results .container {
-        gap: 50px;
+    #results .container section:nth-of-type(1) {
+        margin-right: 20px;
     }
 }
 
@@ -656,6 +656,14 @@ footer ul li:nth-of-type(2) a {
 
     #results .container section {
         margin: 0;
+        padding: 0;
+    }
+
+    #contact .container h2 {
+        margin: 0;
+    }
+
+    #contact .container button {
         padding: 0;
     }
 
