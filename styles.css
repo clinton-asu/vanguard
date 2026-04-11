@@ -209,8 +209,9 @@ p {
     line-height: 1.5;
 }
 
-a {
-    cursor: default;
+a,
+button {
+    cursor: pointer;
 }
 
 h2,
@@ -264,6 +265,10 @@ nav ul {
     background-color: var(--black);
 }
 
+nav li {
+    transition: background-color .3s ease-in;
+}
+
 nav li a {
     display: block;
     font-family: sans-serif;
@@ -276,9 +281,13 @@ nav li a {
     transition: background-color .3s ease-in;
 }
 
-nav a:hover,
+nav li:hover,
 nav input:hover {
     background-color: var(--blue);
+    color: var(--black);
+}
+
+nav li a:hover {
     color: var(--black);
 }
 
@@ -371,6 +380,13 @@ nav input:checked~label:not(.steps) span:after {
     margin: 0;
 }
 
+#hero .container {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
 #hero a {
     text-decoration: none;
     padding: 15px 15px 16px;
@@ -394,7 +410,6 @@ nav input:checked~label:not(.steps) span:after {
 
 #hero a:hover,
 #contact button:hover {
-    cursor: default;
     background-color: var(--red);
     transform: scale(1.05);
 }
@@ -525,10 +540,6 @@ form {
     margin: 20px auto;
 }
 
-form section {
-    margin: 10px auto;
-}
-
 form label,
 form input,
 form textarea {
@@ -546,6 +557,17 @@ form textarea {
     padding: 10px;
     box-sizing: border-box;
     border: 2px solid var(--blue);
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: green;
+}
+
+form input:focus:invalid,
+form textarea:focus:invalid {
+    border-color: red;
 }
 
 form button {
@@ -627,8 +649,6 @@ footer ul li:nth-of-type(2) a {
     #results .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        flex-direction: row;
-        justify-content: space-between;
         gap: 15px 20px;
     }
 
