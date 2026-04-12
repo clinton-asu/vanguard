@@ -441,13 +441,14 @@ main>section {
 /* Results section */
 #results {
     background-color: var(--blue);
-    padding: 30px 0;
+    padding: 30px 0 10px;
     color: var(--white);
     margin-bottom: 0px;
 }
 
+#results .container section h3,
 #results .container section {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 #results h3 {
@@ -695,11 +696,6 @@ footer ul li:nth-of-type(2) a {
 
     #services .container>h2 {
         grid-column: 1 / -1;
-    }
-
-    #results .container section {
-        margin: 0;
-        padding: 0;
     }
 
     #contact .container button {
