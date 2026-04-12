@@ -296,6 +296,7 @@ nav label {
     padding: 1rem;
     -webkit-user-select: none;
     user-select: none;
+    cursor: pointer;
 }
 
 /* Hamburger menu icon (middle line) */
