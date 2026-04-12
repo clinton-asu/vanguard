@@ -605,7 +605,7 @@ footer ul li:nth-of-type(2) a {
 }
 
 
-/* MEDIA QUERIES (MEDIUM) */
+/* MEDIA QUERY (medium) */
 @media screen and (min-width: 800px) {
     header .container {
         padding: 10px;
@@ -677,7 +677,7 @@ footer ul li:nth-of-type(2) a {
 }
 
 
-/* MEDIA QUERIES (LARGE) */
+/* MEDIA QUERY (large) */
 @media screen and (min-width: 1024px) {
     #services .container {
         display: grid;
