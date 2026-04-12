@@ -385,7 +385,7 @@ nav input:checked~label:not(.steps) span:after {
     background: rgba(0, 0, 0, 0.1);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    padding: 20px;
+    padding: 20px 10px 0;
     width: fit-content;
 }
 
