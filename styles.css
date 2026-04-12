@@ -421,6 +421,10 @@ main>section {
 }
 
 /* Services section */
+#services {
+    padding-bottom: 5px;
+}
+
 #services .container>section {
     background-color: var(--blue);
     color: var(--white);
@@ -437,7 +441,7 @@ main>section {
 /* Results section */
 #results {
     background-color: var(--blue);
-    padding: 30px 0 20px;
+    padding: 30px 0;
     color: var(--white);
     margin-bottom: 0px;
 }
@@ -567,12 +571,12 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: green;
+    border-color: var(--charcoal);
 }
 
 form input:focus:invalid,
 form textarea:focus:invalid {
-    border-color: red;
+    border-color: var(--red);
 }
 
 form button {
